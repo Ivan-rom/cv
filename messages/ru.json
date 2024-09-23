@@ -5,5 +5,8 @@
   },
   "HomePage": {
     "title": "Резюме"
+  },
+  "PortfolioPage": {
+    "title": "Портфолио"
   }
 }
