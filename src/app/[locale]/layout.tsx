@@ -1,7 +1,7 @@
-import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 import { getMessages } from "next-intl/server";
 import { NextIntlClientProvider } from "next-intl";
+import { getTranslations } from "next-intl/server";
 
 const roboto = Roboto({
   subsets: ["latin", "cyrillic"],
@@ -9,10 +9,18 @@ const roboto = Roboto({
   display: "swap",
 });
 
-export const metadata: Metadata = {
-  title: "Ivan Romanenko CV",
-  description: "Ivan Romanenko CV",
-};
+export async function generateMetadata({
+  params: { locale },
+}: {
+  params: { locale: string };
+}) {
+  const t = await getTranslations({ locale, namespace: "Metadata" });
+
+  return {
+    title: t("title"),
+    description: t("description"),
+  };
+}
 
 export default async function RootLayout({
   children,
