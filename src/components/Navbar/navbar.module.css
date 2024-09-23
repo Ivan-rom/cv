@@ -1,0 +1,13 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.link {
+  color: green;
+
+  &.active {
+    color: red;
+  }
+}

@@ -2,6 +2,9 @@ import { Roboto } from "next/font/google";
 import { getMessages } from "next-intl/server";
 import { NextIntlClientProvider } from "next-intl";
 import { getTranslations } from "next-intl/server";
+import Navbar from "@/components/Navbar/Navbar";
+import LocaleSelect from "@/components/LocaleSelect/LocaleSelect";
+import styles from "./layout.module.css";
 
 const roboto = Roboto({
   subsets: ["latin", "cyrillic"],
@@ -35,6 +38,11 @@ export default async function RootLayout({
     <html lang={locale}>
       <body className={roboto.className}>
         <NextIntlClientProvider messages={messages}>
+          <header className={styles.header}>
+            <Navbar />
+            <LocaleSelect />
+          </header>
+
           {children}
         </NextIntlClientProvider>
       </body>

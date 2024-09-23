@@ -1,6 +1,6 @@
 import { defineRouting } from "next-intl/routing";
 import { createSharedPathnamesNavigation } from "next-intl/navigation";
-import { locales } from "@/helpers/constats";
+import { locales } from "@/helpers/constants";
 
 export const routing = defineRouting({
   locales: locales,
