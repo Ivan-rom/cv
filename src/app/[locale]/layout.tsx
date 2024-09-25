@@ -4,6 +4,8 @@ import { NextIntlClientProvider } from "next-intl";
 import { getTranslations } from "next-intl/server";
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
+import styles from "./layout.module.css";
+import classNames from "classnames";
 
 const roboto = Roboto({
   subsets: ["latin", "cyrillic"],
@@ -35,7 +37,7 @@ export default async function RootLayout({
 
   return (
     <html lang={locale}>
-      <body className={roboto.className}>
+      <body className={classNames(roboto.className, styles.body)}>
         <NextIntlClientProvider messages={messages}>
           <Header />
           {children}
