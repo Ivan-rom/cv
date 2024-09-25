@@ -5,9 +5,10 @@
 }
 
 .link {
-  color: green;
-
   &.active {
-    color: red;
+    &::before,
+    &::after {
+      width: 50%;
+    }
   }
 }

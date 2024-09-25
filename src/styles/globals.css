@@ -1,0 +1,22 @@
+:root {
+  --accent-color: #3ab84f;
+  --body-bg-color: #181922;
+  --text-color: #ffffff;
+}
+
+body {
+  font-family: Roboto, sans-serif;
+  background-color: var(--body-bg-color);
+  color: var(--text-color);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}

@@ -4,6 +4,8 @@ import { Routes } from "@/helpers/enums";
 import { Link, usePathname } from "@/i18n/routing";
 import classNames from "classnames";
 import styles from "./navbar.module.css";
+import sharedStyles from "@/styles/shared.module.css";
+import { useTranslations } from "next-intl";
 
 const links = [
   { href: Routes.cv, text: "cv" },
@@ -11,6 +13,8 @@ const links = [
 ];
 
 function Navbar() {
+  const t = useTranslations("Navbar");
+
   const pathname = usePathname();
 
   const isActiveLink = (href: string) => pathname === href;
@@ -20,11 +24,11 @@ function Navbar() {
       {links.map((link) => (
         <Link
           key={link.href}
-          className={classNames(styles.link, {
+          className={classNames(sharedStyles.link, styles.link, {
             [styles.active]: isActiveLink(link.href),
           })}
           href={link.href}>
-          {link.text}
+          {t(link.text)}
         </Link>
       ))}
     </nav>

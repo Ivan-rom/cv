@@ -1,0 +1,30 @@
+.link {
+  color: var(--accent-color);
+  position: relative;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    height: 2px;
+    width: 0%;
+    background-color: var(--accent-color);
+    transition: 0.3s;
+  }
+
+  &::before {
+    right: 50%;
+  }
+
+  &::after {
+    left: 50%;
+  }
+
+  &:hover {
+    &::before,
+    &::after {
+      width: 50%;
+    }
+  }
+}

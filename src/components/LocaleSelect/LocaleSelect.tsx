@@ -4,6 +4,7 @@ import { locales } from "@/helpers/constants";
 import { usePathname } from "@/i18n/routing";
 import { useParams, useRouter } from "next/navigation";
 import { ChangeEvent, useTransition } from "react";
+import styles from "./localeSelect.module.css";
 
 function LocaleSelect() {
   const router = useRouter();
@@ -20,13 +21,19 @@ function LocaleSelect() {
   };
 
   return (
-    <select onChange={changeHandler} defaultValue={locale} disabled={isPending}>
-      {locales.map((locale) => (
-        <option value={locale} key={locale}>
-          {locale}
-        </option>
-      ))}
-    </select>
+    <div className={styles.customSelect}>
+      <select
+        className={styles.select}
+        onChange={changeHandler}
+        defaultValue={locale}
+        disabled={isPending}>
+        {locales.map((locale) => (
+          <option value={locale} key={locale}>
+            {locale}
+          </option>
+        ))}
+      </select>
+    </div>
   );
 }
 

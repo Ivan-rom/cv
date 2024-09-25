@@ -3,6 +3,10 @@
     "title": "Ivan Romanenko CV",
     "description": "Ivan Romanenko CV"
   },
+  "Navbar": {
+    "cv": "CV",
+    "portfolio": "Portfolio"
+  },
   "HomePage": {
     "title": "CV"
   },
