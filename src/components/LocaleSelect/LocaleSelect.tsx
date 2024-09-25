@@ -5,7 +5,7 @@ import { usePathname } from "@/i18n/routing";
 import { useParams, useRouter } from "next/navigation";
 import { ChangeEvent, useTransition } from "react";
 
-function LocalSelect() {
+function LocaleSelect() {
   const router = useRouter();
   const { locale } = useParams();
   const pathname = usePathname();
@@ -30,4 +30,4 @@ function LocalSelect() {
   );
 }
 
-export default LocalSelect;
+export default LocaleSelect;
