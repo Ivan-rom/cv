@@ -7,6 +7,9 @@
     "cv": "CV",
     "portfolio": "Portfolio"
   },
+  "Footer": {
+    "name": "Ivan Romanenko"
+  },
   "HomePage": {
     "title": "CV"
   },
