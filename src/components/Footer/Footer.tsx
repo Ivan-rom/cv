@@ -3,8 +3,7 @@ import Container from "../Container/Container";
 import styles from "./footer.module.css";
 import sharedStyles from "@/styles/shared.module.css";
 import classNames from "classnames";
-
-const email = "rom_1van@icloud.com";
+import { email } from "@/helpers/constants";
 
 function Footer() {
   const t = useTranslations("Footer");

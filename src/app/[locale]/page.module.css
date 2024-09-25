@@ -1,0 +1,38 @@
+.main {
+  margin-top: 20px;
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.section {
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.avatar {
+  border-radius: 5px;
+  box-shadow: 5px 5px var(--accent-color);
+}
+
+.name {
+  font-size: 52px;
+}
+
+.job {
+  font-size: 32px;
+  color: var(--accent-color);
+}
+
+.contacts {
+  margin-left: auto;
+}

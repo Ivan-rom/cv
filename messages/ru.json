@@ -10,7 +10,16 @@
   "Footer": {
     "name": "Иван Романенко"
   },
-  "HomePage": {
+  "CV": {
+    "hero": {
+      "name": "Иван Романенко",
+      "job": "Фронтенд разработчик"
+    },
+
+    "contacts": {
+      "title": "Контакты"
+    },
+
     "title": "Резюме"
   },
   "PortfolioPage": {

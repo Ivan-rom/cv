@@ -1,11 +1,37 @@
 import { useTranslations } from "next-intl";
+import Image from "next/image";
+import Container from "@/components/Container/Container";
+import styles from "./page.module.css";
+import classNames from "classnames";
+import Contacts from "@/components/Contacts/Contacts";
+import avatar from "@/assets/images/avatar.jpg";
 
 export default function Home() {
-  const t = useTranslations("HomePage");
+  const t = useTranslations("CV");
 
   return (
-    <div>
-      <h1>{t("title")}</h1>
-    </div>
+    <main className={styles.main}>
+      <Container>
+        <div className={styles.content}>
+          <section className={classNames(styles.section, styles.hero)}>
+            <Image
+              className={styles.avatar}
+              src={avatar}
+              alt={t("hero.name")}
+              width="200"
+              height="200"
+            />
+            <div className={styles.title}>
+              <h1 className={styles.name}>{t("hero.name")}</h1>
+              <h2 className={styles.job}>{t("hero.job")}</h2>
+            </div>
+          </section>
+
+          <section className={classNames(styles.section, styles.contacts)}>
+            <Contacts />
+          </section>
+        </div>
+      </Container>
+    </main>
   );
 }
