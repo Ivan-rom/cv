@@ -6,6 +6,7 @@ import classNames from "classnames";
 import Contacts from "@/components/Contacts/Contacts";
 import avatar from "@/assets/images/avatar.jpg";
 import Skills from "@/components/Skills/Skills";
+import About from "@/components/About/About";
 
 export default function Home() {
   const t = useTranslations("CV");
@@ -29,12 +30,18 @@ export default function Home() {
             <h2 className={styles.job}>{t("hero.job")}</h2>
           </section>
 
-          <section className={classNames(styles.section, styles.contacts)}>
+          <section
+            id="contacts"
+            className={classNames(styles.section, styles.contacts)}>
             <Contacts />
           </section>
 
           <section className={classNames(styles.section, styles.skills)}>
             <Skills />
+          </section>
+
+          <section className={classNames(styles.section, styles.about)}>
+            <About />
           </section>
         </div>
       </Container>

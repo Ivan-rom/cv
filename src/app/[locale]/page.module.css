@@ -11,6 +11,10 @@
 .section {
   padding: 10px;
   border-radius: 5px;
+
+  &:target {
+    background-color: var(--header-bg-color);
+  }
 }
 
 .hero {

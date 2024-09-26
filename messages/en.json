@@ -24,6 +24,11 @@
       "title": "Skills"
     },
 
+    "about": {
+      "title": "About",
+      "text": "<p>A young developer who studies <span>on his own</span>. During my studies, I have written many projects, <span>the best of which</span> can be found in the <github>portfolio</github></p> <p>I have completed many courses and continue to improve every day. I consider these facts about me to be the most <span>important indicators</span>:</p> <p>During my studies at <rs>RS School</rs>, I was a <span>team lead</span> in all final projects. This speaks about my <span>communication skills</span> and <span>ability to work in a team</span></p> <p>My strengths are <span>the ability to prioritize</span>, and I also perfectly <span>understand what is required of me</span> and <span>do it quickly</span></p> <p>I always strive to learn something new and look for additional opportunities for professional growth. If you are interested in me, you know <contacts>how to contact me</contacts> ;)</p>"
+    },
+
     "title": "CV"
   },
   "PortfolioPage": {
