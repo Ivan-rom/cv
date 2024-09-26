@@ -15,20 +15,22 @@ export default function Home() {
     <main className={styles.main}>
       <Container>
         <div className={styles.content}>
-          <section className={classNames(styles.section, styles.image)}>
-            <Image
-              className={styles.avatar}
-              src={avatar}
-              alt={t("hero.name")}
-              width="200"
-              height="200"
-            />
-          </section>
+          <div className={styles.hero}>
+            <section className={classNames(styles.section, styles.image)}>
+              <Image
+                className={styles.avatar}
+                src={avatar}
+                alt={t("hero.name")}
+                width="200"
+                height="200"
+              />
+            </section>
 
-          <section className={classNames(styles.section, styles.title)}>
-            <h1 className={styles.name}>{t("hero.name")}</h1>
-            <h2 className={styles.job}>{t("hero.job")}</h2>
-          </section>
+            <section className={classNames(styles.section, styles.title)}>
+              <h1 className={styles.name}>{t("hero.name")}</h1>
+              <h2 className={styles.job}>{t("hero.job")}</h2>
+            </section>
+          </div>
 
           <section
             id="contacts"

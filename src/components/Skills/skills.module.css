@@ -5,5 +5,11 @@
 .list {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   gap: 10px;
+  height: calc(100% - 49px);
+
+  @media (max-width: 670px) {
+    height: 270px;
+  }
 }
