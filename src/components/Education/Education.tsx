@@ -26,7 +26,6 @@ function Education() {
 
   return (
     <>
-      <h2 className={styles.title}>{t("title")}</h2>
       <ul className={styles.list}>
         {educationList.map(({ id, link }) => (
           <li key={id} className={styles.element}>

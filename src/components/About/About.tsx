@@ -24,7 +24,6 @@ function About() {
 
   return (
     <>
-      <h2 className={styles.title}>{t("title")}</h2>
       {t.rich("text", {
         p: (chunks) => <p className={styles.paragraph}>{chunks}</p>,
         span: (chunks) => <span className={styles.accent}>{chunks}</span>,

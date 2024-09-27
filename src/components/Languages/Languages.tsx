@@ -19,7 +19,6 @@ function Languages() {
 
   return (
     <>
-      <h2 className={styles.title}>{t("title")}</h2>
       <ul className={styles.languages}>
         {languages.map((lang) => (
           <li key={lang.name} className={styles.language}>

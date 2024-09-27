@@ -35,22 +35,27 @@ export default function Home() {
           <section
             id="contacts"
             className={classNames(styles.section, styles.contacts)}>
+            <h2 className={styles.sectionTitle}>{t("contacts.title")}</h2>
             <Contacts />
           </section>
 
           <section className={classNames(styles.section, styles.languages)}>
+            <h2 className={styles.sectionTitle}>{t("languages.title")}</h2>
             <Languages />
           </section>
 
           <section className={classNames(styles.section, styles.skills)}>
+            <h2 className={styles.sectionTitle}>{t("skills.title")}</h2>
             <Skills />
           </section>
 
           <section className={classNames(styles.section, styles.about)}>
+            <h2 className={styles.sectionTitle}>{t("about.title")}</h2>
             <About />
           </section>
 
           <section className={classNames(styles.section, styles.education)}>
+            <h2 className={styles.sectionTitle}>{t("education.title")}</h2>
             <Education />
           </section>
         </div>

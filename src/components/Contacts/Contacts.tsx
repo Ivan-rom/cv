@@ -1,7 +1,6 @@
 import classNames from "classnames";
 import styles from "./contacts.module.css";
 import sharedStyles from "@/styles/shared.module.css";
-import { useTranslations } from "next-intl";
 import githubIcon from "@/assets/icons/github.svg";
 import telegramIcon from "@/assets/icons/telegram.svg";
 import emailIcon from "@/assets/icons/email.svg";
@@ -32,11 +31,8 @@ const contactsList = [
 ];
 
 function Contacts() {
-  const t = useTranslations("CV.contacts");
-
   return (
     <>
-      <h2 className={styles.title}>{t("title")}</h2>
       <ul className={styles.list}>
         {contactsList.map((contact) => (
           <li key={contact.link} className={styles.contact}>
