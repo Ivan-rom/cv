@@ -8,7 +8,7 @@ export enum SkillsList {
   "React" = "React",
   "Next JS" = "Next JS",
   "JavaScript" = "JavaScript",
-  "Redux/Redux toolkit" = "Redux/Redux toolkit",
+  "Redux" = "Redux",
   "Git" = "Git",
   "CSS" = "CSS",
   "SCSS/SASS" = "SCSS/SASS",

@@ -3,13 +3,19 @@
 }
 
 .list {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr;
   gap: 10px;
-  height: calc(100% - 49px);
 
-  @media (max-width: 670px) {
-    height: 270px;
+  @media (max-width: 800px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  @media (max-width: 450px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media (max-width: 380px) {
+    grid-template-columns: repeat(2, 1fr);
   }
 }

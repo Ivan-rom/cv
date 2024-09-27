@@ -4,21 +4,37 @@
 
 .content {
   display: grid;
-  grid-template-columns: 200px 1fr 200px;
-  grid-template-rows: auto;
+  grid-template-areas:
+    "image title contacts"
+    "skills about languages"
+    "skills education education";
   gap: 20px;
 
-  @media (max-width: 768px) {
-    grid-template-columns: 200px 1fr;
-    grid-template-rows: 1fr 200px auto;
+  @media (max-width: 990px) {
+    grid-template-areas:
+      "image title contacts"
+      "skills about about"
+      "skills education education"
+      "languages . .";
   }
 
-  @media (max-width: 670px) {
-    grid-template-rows: 1fr 200px auto;
+  @media (max-width: 800px) {
+    grid-template-areas:
+      "image title title"
+      "contacts languages languages"
+      "skills skills skills"
+      "about about about"
+      "education education education ";
   }
 
-  @media (max-width: 545px) {
-    grid-template-columns: 1fr;
+  @media (max-width: 550px) {
+    grid-template-areas:
+      "image image image"
+      "title title title"
+      "contacts languages languages"
+      "skills skills skills"
+      "about about about"
+      "education education education ";
   }
 }
 
@@ -30,14 +46,16 @@
   }
 }
 
-.hero {
-  grid-column-end: span 2;
-  display: flex;
-  gap: 20px;
+.image {
+  grid-area: image;
+}
 
-  @media (max-width: 545px) {
-    flex-wrap: wrap;
-  }
+.title {
+  grid-area: title;
+}
+
+.contacts {
+  grid-area: contacts;
 }
 
 .avatar {
@@ -55,23 +73,14 @@
 }
 
 .skills {
+  grid-area: skills;
   height: 100%;
-
-  @media (max-width: 670px) {
-    grid-column-end: span 2;
-  }
-
-  @media (max-width: 545px) {
-    grid-column-end: 1;
-  }
 }
 
 .about {
-  @media (max-width: 1024px) {
-    grid-column-end: span 2;
-  }
+  grid-area: about;
+}
 
-  @media (max-width: 545px) {
-    grid-column-end: 1;
-  }
+.education {
+  grid-area: education;
 }
