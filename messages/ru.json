@@ -42,6 +42,26 @@
       "native": "родной"
     },
 
+    "education": {
+      "title": "Образование",
+      "list": {
+        "1": {
+          "title": "RS School | React",
+          "date": "Июль 2024 - Сентябрь 2024",
+          "linkText": "Сертификат"
+        },
+        "2": {
+          "title": "RS School | JavaScript/Frontend",
+          "date": "Ноябрь 2023 - Июнь 2024",
+          "linkText": "Сертификат"
+        },
+        "3": {
+          "title": "Кыргызско-Российская Академия Образования",
+          "date": "Сентябрь 2020 - Май 2023"
+        }
+      }
+    },
+
     "title": "Резюме"
   },
   "PortfolioPage": {

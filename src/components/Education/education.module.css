@@ -1,0 +1,28 @@
+.title {
+  margin-bottom: 10px;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.element {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--second-bg-color);
+  padding: 10px;
+  border-radius: 5px;
+
+  @media (max-width: 550px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.date {
+  filter: brightness(0.5);
+}

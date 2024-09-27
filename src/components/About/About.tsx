@@ -5,8 +5,22 @@ import styles from "./about.module.css";
 import sharedStyles from "@/styles/shared.module.css";
 import classNames from "classnames";
 
+type LinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & {
+  children: React.ReactNode;
+  href: string;
+};
+
 function About() {
   const t = useTranslations("CV.about");
+
+  const TextLink = ({ children, href, ...rest }: LinkProps) => (
+    <Link
+      className={classNames(sharedStyles.link, sharedStyles.inText)}
+      href={href}
+      {...rest}>
+      {children}
+    </Link>
+  );
 
   return (
     <>
@@ -15,26 +29,13 @@ function About() {
         p: (chunks) => <p className={styles.paragraph}>{chunks}</p>,
         span: (chunks) => <span className={styles.accent}>{chunks}</span>,
         github: (chunks) => (
-          <Link
-            className={classNames(sharedStyles.link, styles.link)}
-            href={Routes.portfolio}>
-            {chunks}
-          </Link>
+          <TextLink href={Routes.portfolio}>{chunks}</TextLink>
         ),
-        contacts: (chunks) => (
-          <Link
-            className={classNames(sharedStyles.link, styles.link)}
-            href="#contacts">
-            {chunks}
-          </Link>
-        ),
+        contacts: (chunks) => <TextLink href="#contacts">{chunks}</TextLink>,
         rs: (chunks) => (
-          <a
-            target="_about"
-            className={classNames(sharedStyles.link, styles.link)}
-            href="https://rs.school/">
+          <TextLink href="https://rs.school/" target="_blank">
             {chunks}
-          </a>
+          </TextLink>
         ),
       })}
     </>

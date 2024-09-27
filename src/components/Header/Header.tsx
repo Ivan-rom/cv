@@ -16,6 +16,8 @@ function Header() {
   };
 
   useEffect(() => {
+    setIsScrolled(window.scrollY > 0);
+
     const scrollHandler = () => {
       setIsScrolled(window.scrollY > 0);
     };

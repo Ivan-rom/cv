@@ -8,6 +8,7 @@ import avatar from "@/assets/images/avatar.jpg";
 import Skills from "@/components/Skills/Skills";
 import About from "@/components/About/About";
 import Languages from "@/components/Languages/Languages";
+import Education from "@/components/Education/Education";
 
 export default function Home() {
   const t = useTranslations("CV");
@@ -47,6 +48,10 @@ export default function Home() {
 
           <section className={classNames(styles.section, styles.about)}>
             <About />
+          </section>
+
+          <section className={classNames(styles.section, styles.education)}>
+            <Education />
           </section>
         </div>
       </Container>

@@ -42,6 +42,26 @@
       "native": "native"
     },
 
+    "education": {
+      "title": "Education",
+      "list": {
+        "1": {
+          "title": "RS School | React",
+          "date": "July 2024 - September 2024",
+          "linkText": "Certificate"
+        },
+        "2": {
+          "title": "RS School | JavaScript/Frontend",
+          "date": "November 2023 - June 2024",
+          "linkText": "Certificate"
+        },
+        "3": {
+          "title": "Kyrgyz-Russian Academy of Education",
+          "date": "September 2020 - May 2023"
+        }
+      }
+    },
+
     "title": "CV"
   },
   "PortfolioPage": {

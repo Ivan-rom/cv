@@ -14,7 +14,11 @@ function Footer() {
         <div className={styles.content}>
           <div className={styles.name}>{t("name")}</div>
           <a
-            className={classNames(sharedStyles.link, styles.link)}
+            className={classNames(
+              sharedStyles.link,
+              sharedStyles.inText,
+              styles.link
+            )}
             href={`mailto:${email}`}>
             {email}
           </a>
