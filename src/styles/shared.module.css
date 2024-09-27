@@ -63,3 +63,28 @@
     background-color: var(--color);
   }
 }
+
+.chip {
+  border: 1px solid var(--accent-color);
+  color: var(--accent-color);
+  padding: 5px;
+  border-radius: 5px;
+  position: relative;
+  transition: 0.2s;
+
+  & input {
+    appearance: none;
+    position: absolute;
+    inset: 0;
+    cursor: pointer;
+  }
+
+  &:hover {
+    filter: brightness(1.1);
+  }
+
+  &:has(input:checked) {
+    background-color: var(--accent-color);
+    color: var(--text-color);
+  }
+}
