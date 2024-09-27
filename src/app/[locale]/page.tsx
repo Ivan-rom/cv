@@ -7,6 +7,7 @@ import Contacts from "@/components/Contacts/Contacts";
 import avatar from "@/assets/images/avatar.jpg";
 import Skills from "@/components/Skills/Skills";
 import About from "@/components/About/About";
+import Languages from "@/components/Languages/Languages";
 
 export default function Home() {
   const t = useTranslations("CV");
@@ -34,6 +35,10 @@ export default function Home() {
             id="contacts"
             className={classNames(styles.section, styles.contacts)}>
             <Contacts />
+          </section>
+
+          <section className={classNames(styles.section, styles.languages)}>
+            <Languages />
           </section>
 
           <section className={classNames(styles.section, styles.skills)}>

@@ -1,0 +1,19 @@
+.title {
+  margin-bottom: 10px;
+}
+
+.languages {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.name {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.level {
+  color: var(--accent-color);
+}

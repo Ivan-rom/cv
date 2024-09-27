@@ -13,15 +13,15 @@
   @media (max-width: 990px) {
     grid-template-areas:
       "image title contacts"
+      "languages about about"
       "skills about about"
-      "skills education education"
-      "languages . .";
+      "skills education education";
   }
 
   @media (max-width: 800px) {
     grid-template-areas:
       "image title title"
-      "contacts languages languages"
+      "contacts contacts languages"
       "skills skills skills"
       "about about about"
       "education education education ";
@@ -31,10 +31,21 @@
     grid-template-areas:
       "image image image"
       "title title title"
-      "contacts languages languages"
+      "contacts contacts languages"
       "skills skills skills"
       "about about about"
       "education education education ";
+  }
+
+  @media (max-width: 450px) {
+    grid-template-areas:
+      "image"
+      "title"
+      "contacts"
+      "languages"
+      "skills"
+      "about"
+      "education";
   }
 }
 
@@ -79,6 +90,10 @@
 
 .about {
   grid-area: about;
+}
+
+.languages {
+  grid-area: languages;
 }
 
 .education {
