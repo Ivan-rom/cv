@@ -10,6 +10,10 @@
   "Footer": {
     "name": "Ivan Romanenko"
   },
+  "NotFoundPage": {
+    "title": "This page does not exist",
+    "text": "You can go <home>to the main page</home>"
+  },
   "CV": {
     "hero": {
       "name": "Ivan Romanenko",
