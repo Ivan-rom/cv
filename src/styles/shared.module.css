@@ -24,10 +24,12 @@
     left: 50%;
   }
 
-  &:hover {
-    &::before,
-    &::after {
-      width: 50%;
+  @media (hover: hover) {
+    &:hover {
+      &::before,
+      &::after {
+        width: 50%;
+      }
     }
   }
 
@@ -39,8 +41,10 @@
       bottom: -2px;
     }
 
-    &:hover {
-      filter: brightness(1.2);
+    @media (hover: hover) {
+      &:hover {
+        filter: brightness(1.2);
+      }
     }
   }
 }
@@ -58,9 +62,11 @@
 
   transition: 0.3s;
 
-  &:hover {
-    color: var(--hover-color);
-    background-color: var(--color);
+  @media (hover: hover) {
+    &:hover {
+      color: var(--hover-color);
+      background-color: var(--color);
+    }
   }
 }
 
@@ -79,8 +85,10 @@
     cursor: pointer;
   }
 
-  &:hover {
-    filter: brightness(1.1);
+  @media (hover: hover) {
+    &:hover {
+      filter: brightness(1.1);
+    }
   }
 
   &:has(input:checked) {
