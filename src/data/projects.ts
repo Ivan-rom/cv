@@ -29,10 +29,9 @@ export const projects: Project[] = [
     title: "Rss puzzle",
     image: "rss-puzzle.png",
     links: {
-      deploy:
-        "https://rolling-scopes-school.github.io/ivan-rom-JSFE2023Q4/rss-puzzle/dist/",
+      deploy: "https://ivan-rom.github.io/ivan-rom-JSFE2023Q4/rss-puzzle/dist/",
       repository:
-        "https://github.com/rolling-scopes-school/ivan-rom-JSFE2023Q4/tree/rss-puzzle",
+        "https://github.com/ivan-rom/ivan-rom-JSFE2023Q4/tree/rss-puzzle",
     },
     skills: [
       SkillsList.TypeScript,
@@ -41,6 +40,24 @@ export const projects: Project[] = [
       SkillsList.ESlint,
       SkillsList.Webpack,
       SkillsList.Git,
+    ],
+  },
+  {
+    id: "3",
+    title: "Coffee house",
+    image: "coffee-house.png",
+    links: {
+      deploy:
+        "https://rolling-scopes-school.github.io/ivan-rom-JSFE2023Q4/coffee-house/home/",
+      repository:
+        "https://github.com/Ivan-rom/ivan-rom-JSFE2023Q4/tree/coffee-house-week3",
+    },
+    skills: [
+      SkillsList.HTML,
+      SkillsList["SCSS/SASS"],
+      SkillsList.JavaScript,
+      SkillsList.Git,
+      SkillsList.Figma,
     ],
   },
 ];
