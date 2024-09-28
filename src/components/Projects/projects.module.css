@@ -34,9 +34,18 @@
   position: relative;
   height: 200px;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
   overflow: hidden;
+
+  & img {
+    object-fit: cover;
+  }
+}
+
+.emptyImage {
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .description {

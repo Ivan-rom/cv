@@ -1,0 +1,105 @@
+.content {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 10px;
+  grid-template-areas:
+    "title image"
+    "links image"
+    "technologies image"
+    "description description";
+
+  @media (max-width: 900px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 30vh auto;
+
+    grid-template-areas:
+      "title"
+      "image"
+      "links"
+      "technologies"
+      "description";
+  }
+}
+
+.titleSection {
+  margin-bottom: 15px;
+}
+
+.sectionTitle {
+  grid-area: title;
+}
+
+.sectionImage {
+  grid-area: image;
+}
+
+.sectionDescription {
+  grid-area: description;
+}
+
+.sectionSkills {
+  grid-area: technologies;
+}
+
+.sectionLinks {
+  grid-area: links;
+}
+
+.imageWrapper {
+  overflow: hidden;
+
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: 0.2s;
+  filter: drop-shadow(0 0 5px var(--accent-color));
+
+  .image {
+    background-color: var(--second-bg-color);
+  }
+
+  & img {
+    object-fit: contain;
+    transition: 0.2s;
+  }
+
+  &:hover {
+    filter: drop-shadow(0 0 10px var(--accent-color));
+
+    & img {
+      transform: scale(1.1);
+    }
+  }
+}
+
+.description {
+  line-height: 22px;
+
+  .paragraph {
+    margin-bottom: 10px;
+  }
+
+  .list {
+    padding-left: 10px;
+
+    .element {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.skills {
+  display: flex;
+  gap: 20px 10px;
+  flex-wrap: wrap;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: flex-start;
+}

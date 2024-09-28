@@ -1,15 +1,12 @@
-import { Routes, SkillsList } from "@/helpers/enums";
+import { SkillsList } from "@/helpers/enums";
 import { Link } from "@/i18n/routing";
 import styles from "./skills.module.css";
 import sharedStyles from "@/styles/shared.module.css";
+import { createLink } from "@/helpers/methods";
 
 const skills = Object.values(SkillsList);
 
 function Skills() {
-  const createLink = (skill: string) => {
-    return `${Routes.portfolio}?${encodeURI(`filters=["${skill}"]`)}`;
-  };
-
   return (
     <>
       <ul className={styles.list}>

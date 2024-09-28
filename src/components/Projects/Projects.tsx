@@ -1,51 +1,18 @@
 "use client";
 
-import { SkillsList } from "@/helpers/enums";
 import Image from "next/image";
 import Filter from "@/components/Filter/Filter";
 import styles from "./projects.module.css";
 import { useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
-
-type Project = {
-  id: number;
-  title: string;
-  image?: string;
-  skills: SkillsList[];
-};
-
-const projects: Project[] = [
-  {
-    id: 1,
-    title: "GraphiQL App",
-    image: "graphiql-app.png",
-    skills: [
-      SkillsList["Next JS"],
-      SkillsList.TypeScript,
-      SkillsList.CSS,
-      SkillsList.JavaScript,
-      SkillsList.i18next,
-      SkillsList.ESlint,
-      SkillsList.React,
-      SkillsList.Redux,
-      SkillsList.Webpack,
-    ],
-  },
-  {
-    id: 2,
-    title: "Rss puzzle",
-    image: "rss-puzzle.png",
-    skills: [
-      SkillsList.TypeScript,
-      SkillsList.CSS,
-      SkillsList.JavaScript,
-      SkillsList.ESlint,
-      SkillsList.Webpack,
-    ],
-  },
-];
+import { Project } from "@/helpers/types";
+import { projects } from "@/data/projects";
+import { Link } from "@/i18n/routing";
+import { Routes } from "@/helpers/enums";
+import { useTranslations } from "next-intl";
 
 function Projects() {
+  const t = useTranslations("PortfolioPage");
   const searchParams = useSearchParams();
 
   const [filteredProjects, setFilteredProjects] = useState<Project[]>([
@@ -73,21 +40,20 @@ function Projects() {
     <ul className={styles.projects}>
       {filteredProjects.map(({ id, title, skills, image }) => (
         <li key={id} className={styles.project}>
-          <div className={styles.image}>
-            {image ? (
-              <Image
-                src={`/${image}`}
-                alt={title}
-                layout="fill"
-                objectFit="cover"
-              />
-            ) : (
-              <p>No image</p>
-            )}
-          </div>
+          <Link href={`${Routes.portfolio}/${id}`}>
+            <div className={styles.image}>
+              {image ? (
+                <Image src={`/${image}`} alt={title} fill />
+              ) : (
+                <p className={styles.emptyImage}>{t("noImage")}</p>
+              )}
+            </div>
+          </Link>
 
           <div className={styles.description}>
-            <h2 className={styles.projectTitle}>{title}</h2>
+            <Link href={`${Routes.portfolio}/${id}`}>
+              <h2 className={styles.projectTitle}>{title}</h2>
+            </Link>
 
             <ul className={styles.skills}>
               {skills.map((skill) => (
