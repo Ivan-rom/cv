@@ -15,3 +15,7 @@
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
+.skill {
+  margin-bottom: 10px;
+}
