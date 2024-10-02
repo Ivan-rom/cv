@@ -60,4 +60,56 @@ export const projects: Project[] = [
       SkillsList.Figma,
     ],
   },
+  {
+    id: "4",
+    title: "Tic-tac-toe",
+    image: "tic-tac-toe.png",
+    links: {
+      deploy: "https://ivan-rom.github.io/tictactoe/",
+      repository: "https://github.com/Ivan-rom/tictactoe",
+    },
+    skills: [
+      SkillsList.HTML,
+      SkillsList.JavaScript,
+      SkillsList.CSS,
+      SkillsList.Git,
+    ],
+  },
+  {
+    id: "5",
+    title: "Base",
+    image: "base.png",
+    links: {
+      deploy: "https://ivan-rom.github.io/base/",
+      repository: "https://github.com/Ivan-rom/base",
+    },
+    skills: [SkillsList.HTML, SkillsList["SCSS/SASS"], SkillsList.Git],
+  },
+  {
+    id: "6",
+    title: "Web.Dev",
+    image: "web.dev.png",
+    links: {
+      deploy: "https://ivan-rom.github.io/Web.Dev/",
+      repository: "https://github.com/Ivan-rom/Web.Dev",
+    },
+    skills: [SkillsList.HTML, SkillsList.CSS, SkillsList.Git],
+  },
+  {
+    id: "7",
+    title: "E-commerce",
+    image: "e-commerce.png",
+    links: {
+      deploy: "https://dazzling-lokum-95652d.netlify.app/",
+      repository: "https://github.com/Ivan-rom/e-commerce",
+    },
+    skills: [
+      SkillsList.React,
+      SkillsList.Redux,
+      SkillsList.ESlint,
+      SkillsList.Vite,
+      SkillsList.TypeScript,
+      SkillsList.Git,
+    ],
+  },
 ];
