@@ -9,12 +9,21 @@ type EducationElement = {
 
 const educationList: EducationElement[] = [
   {
+    id: 5,
+  },
+  {
+    id: 4,
+  },
+  {
     id: 1,
     link: "https://app.rs.school/certificate/zpggjymc",
   },
   {
     id: 2,
     link: "https://app.rs.school/certificate/rhuezltn",
+  },
+  {
+    id: 6,
   },
   {
     id: 3,
