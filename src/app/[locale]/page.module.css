@@ -80,11 +80,20 @@
 
 .name {
   font-size: 52px;
+
+  @media (max-width: 990px) {
+    font-size: 40px;
+  }
 }
 
 .job {
   font-size: 32px;
   color: var(--accent-color);
+}
+
+.download {
+  display: inline-block;
+  margin-top: 10px;
 }
 
 .skills {

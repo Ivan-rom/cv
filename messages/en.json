@@ -21,7 +21,8 @@
   "CV": {
     "hero": {
       "name": "Ivan Romanenko",
-      "job": "Frontend Developer"
+      "job": "Frontend Developer",
+      "download": "Download CV"
     },
 
     "contacts": {
