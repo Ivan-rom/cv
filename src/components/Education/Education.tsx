@@ -23,6 +23,9 @@ const educationList: EducationElement[] = [
     link: "https://app.rs.school/certificate/rhuezltn",
   },
   {
+    id: 7,
+  },
+  {
     id: 6,
   },
   {
